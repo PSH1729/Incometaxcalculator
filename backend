@@ -1,0 +1,15 @@
+function computeTax() {
+    const income = parseFloat(document.getElementById('income').value);
+    const deductions = parseFloat(document.getElementById('deductions').value) || 0;
+    const taxableIncome = income - deductions;
+
+    let tax = 0;
+    // Add logic based on new tax slabs here
+    if (taxableIncome > 1000000) {
+        tax = (.3 * (taxableIncome - 1000000)) + 100000; // Example logic
+    } else if (taxableIncome > 500000) {
+        tax = .2 * (taxableIncome - 500000);
+    }
+
+    document.getElementById('result').innerText = `Your tax is: ₹${tax}`;
+}
