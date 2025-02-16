@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Computation</title>
+    <style>
+        /* Add basic styling */
+    </style>
+</head>
+<body>
+    <h1>Tax Computation for 2025</h1>
+    <form id="taxForm">
+        <label for="income">Annual Income:</label>
+        <input type="number" id="income" name="income" required>
+        <label for="deductions">Deductions:</label>
+        <input type="number" id="deductions" name="deductions">
+        <button type="button" onclick="computeTax()">Compute Tax</button>
+    </form>
+    <div id="result"></div>
+    <script src="app.js"></script>
+</body>
+</html>
